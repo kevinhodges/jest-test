@@ -1,5 +1,5 @@
 // function I want to test
-const sum = require('../src/index');
+const minus = require('../src/minus');
 
 // utilties
 const helper = require('./helper')
@@ -8,15 +8,15 @@ let objectToTest;
 
 beforeAll(async () => {
   console.log('beforeAll()')
-  // simulate doing something to sum object i.e. initialising it, potentially with an await
-  objectToTest = sum
+  // simulate doing something to minus object i.e. initialising it, potentially with an await
+  objectToTest = minus
 });
 
 describe('MATH!', () => {
   
   const testData = {
-    test1: [1, 2],
-    test2: [2, 3]
+    test1: [4, 1],
+    test2: [7, 2]
   }
 
   // problem: this code gets called in Jest's "collection phase" and so variables built in beforeAll for example, don't exist in this scope yet
